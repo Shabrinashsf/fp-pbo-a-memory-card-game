@@ -169,7 +169,7 @@ public abstract class BaseMatchCards {
     }
 
     void startTimer() {
-        hideCardTimer = new Timer(1500, e -> hideCards());
+        hideCardTimer = new Timer(5000, e -> hideCards());
         hideCardTimer.setRepeats(false);
         hideCardTimer.start();
     }

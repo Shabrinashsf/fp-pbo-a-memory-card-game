@@ -17,8 +17,8 @@ public abstract class BaseMatchCards {
     }
 
     String[] cardList = {
-        "darkness", "double", "fairy", "fighting", "fire",
-        "grass", "lightning", "metal", "psychic", "water"
+        "1_Fireball", "2_TrenchcoatMushrooms", "3_Monk", "4_Market", "5_Steal",
+        "6_King", "7_StinkTrap", "8_LightningWizard", "9_Hypnosis", "10_Beehive"
     };
 
     int rows, columns;
@@ -230,14 +230,14 @@ public abstract class BaseMatchCards {
 
         for (int i = 0; i < uniqueCards; i++) {
             String cardName = cardList[i];
-            Image img = new ImageIcon(getClass().getResource("/img/" + cardName + ".jpg")).getImage();
+            Image img = new ImageIcon(getClass().getResource("/img/" + cardName + ".png")).getImage();
             ImageIcon icon = new ImageIcon(img.getScaledInstance(cardWidth, cardHeight, Image.SCALE_SMOOTH));
             cardSet.add(new Card(cardName, icon));
         }
 
         cardSet.addAll(new ArrayList<>(cardSet));
 
-        Image back = new ImageIcon(getClass().getResource("/img/back.jpg")).getImage();
+        Image back = new ImageIcon(getClass().getResource("/img/0_CardBack.png")).getImage();
         cardBackImageIcon = new ImageIcon(back.getScaledInstance(cardWidth, cardHeight, Image.SCALE_SMOOTH));
     }
 
